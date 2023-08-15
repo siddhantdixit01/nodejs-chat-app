@@ -40,7 +40,7 @@ io.on('connection', (socket) => {
     console.log('A user disconnected');
   });
 });
-const PORT = "https://timely-dolphin-90ebbb.netlify.app/";
+const PORT = process.env.REACT_APP_BACKEND_URL;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
