@@ -10,9 +10,8 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-const users = {}; // To store user names
+const users = {}; 
 
-// ...
 io.on('connection', (socket) => {
   console.log('A user connected');
 
@@ -41,11 +40,7 @@ io.on('connection', (socket) => {
     console.log('A user disconnected');
   });
 });
-// ...
-
-  
-
-const PORT = process.env.PORT || 3000;
+const PORT = "https://timely-dolphin-90ebbb.netlify.app/";
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
